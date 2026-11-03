@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>باشگاه مشتریان بیمه و وام</title>
+    <style>
+        body {
+            font-family: Tahoma, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            width: 100%;
+            max-width: 400px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 20px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+        .score-box {
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 15px;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        .score-number {
+            font-size: 28px;
+            font-weight: bold;
+            color: #ffd700;
+        }
+        .btn {
+            background: #ff6b6b;
+            color: white;
+            border: none;
+            width: 100%;
+            padding: 12px;
+            border-radius: 10px;
+            font-size: 16px;
+            margin: 10px 0;
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .btn:hover {
+            background: #ff5252;
+        }
+        .btn-bank {
+            background: #4ecdc4;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>🌟 باشگاه مشتریان 🌟</h2>
+        <p>به اپلیکیشن خدمات بیمه و امتیاز وام خوش آمدید</p>
+        
+        <div class="score-box">
+            <div>امتیاز فعلی شما:</div>
+            <div class="score-number" id="score">120</div>
+            <button class="btn" onclick="addScore()">دریافت امتیاز روزانه هديه 🎁</button>
+        </div>
+
+        <button class="btn" onclick="alert('بخش استعلام و خرید بیمه‌نامه به زودی...')">🛡️ استعلام و خرید بیمه</button>
+        <button class="btn btn-bank" onclick="alert('بخش بازار خرید و فروش امتیاز وام به زودی...')">💳 بازار امتیاز وام بانکی</button>
+    </div>
+
+    <script>
+        let currentScore = 120;
+        function addScore() {
+            currentScore += 10;
+            document.getElementById('score').innerText = currentScore;
+            alert('تبریک! ۱۰ امتیاز به حساب شما اضافه شد.');
+        }
+    </script>
+
+</body>
+</html>
